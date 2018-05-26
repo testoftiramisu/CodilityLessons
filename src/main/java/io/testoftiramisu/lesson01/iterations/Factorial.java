@@ -1,4 +1,4 @@
-package io.testoftiramisu.lesson01.iteration;
+package io.testoftiramisu.lesson01.iterations;
 
 import java.math.BigInteger;
 
