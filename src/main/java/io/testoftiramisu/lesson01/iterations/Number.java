@@ -1,6 +1,6 @@
 package io.testoftiramisu.lesson01.iterations;
 
-public class Number {
+public final class Number {
   private int number;
   private StringBuilder builder;
 
@@ -12,6 +12,7 @@ public class Number {
     return number;
   }
 
+  /** Returns number of digits in decimal representation of a number */
   public int countDigits() {
     int result = 0;
     int num = number;
@@ -23,6 +24,7 @@ public class Number {
     return result;
   }
 
+  /** Returns a String representation of number's binary value grouped by octets. */
   public String getBinaryRepresentationInOctets() {
     builder = new StringBuilder(getBinaryRepresentation());
 
@@ -33,6 +35,7 @@ public class Number {
     return builder.toString();
   }
 
+  /** Returns a String representation of number's binary value. */
   public String getBinaryRepresentation() {
     int num = number;
     builder = new StringBuilder();
