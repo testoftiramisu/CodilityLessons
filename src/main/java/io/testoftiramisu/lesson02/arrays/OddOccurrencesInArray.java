@@ -18,9 +18,9 @@ public class OddOccurrencesInArray {
       }
     }
 
-    for (Map.Entry entry : map.entrySet()) {
-      if ((Integer) entry.getValue() % 2 != 0) {
-        return (Integer) entry.getKey();
+    for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+      if (entry.getValue() % 2 != 0) {
+        return entry.getKey();
       }
     }
 

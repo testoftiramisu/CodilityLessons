@@ -6,6 +6,9 @@
 
 /.idea
 
+# Gradle
+.gradle
+
 # User-specific stuff:
 .idea/**/tasks.xml
 .idea/dictionaries
