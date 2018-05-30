@@ -2,6 +2,7 @@ package io.testoftiramisu.lesson03.timecomplexity;
 
 public class PermMissingElem {
 
+  /** Returns a missing element from the given array. */
   public int solution(int[] array) {
     int length = array.length;
     double sum = (Math.pow(length, 2) + 3 * length + 2) / 2;
