@@ -28,8 +28,14 @@ class FrogJmpTest {
   }
 
   @Test
-  @DisplayName("No jumps needed. ")
+  @DisplayName("Big jump.")
   void solution3() {
+    assertThat(frogJmp.solution(10, 20, 30)).isEqualTo(1);
+  }
+
+  @Test
+  @DisplayName("No jumps needed. ")
+  void solution4() {
     assertThat(frogJmp.solution(6, 6, 3)).isEqualTo(0);
   }
 }

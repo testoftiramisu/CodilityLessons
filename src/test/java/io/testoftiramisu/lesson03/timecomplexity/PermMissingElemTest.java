@@ -16,19 +16,22 @@ class PermMissingElemTest {
   @Test
   void solution() {
     int[] array = {1, 2, 3, 5, 6, 7, 8, 9};
-    assertThat(permMissingElem.solution(array)).isEqualTo(4);
+    assertThat(permMissingElem.slowSolution(array)).isEqualTo(4);
+    assertThat(permMissingElem.quickSolution(array)).isEqualTo(4);
   }
 
   @Test
   void empty() {
     int[] array = new int[0];
-    assertThat(permMissingElem.solution(array)).isEqualTo(1);
+    assertThat(permMissingElem.slowSolution(array)).isEqualTo(1);
+    assertThat(permMissingElem.quickSolution(array)).isEqualTo(1);
   }
 
   @Test
   void single() {
     int[] array = {2};
-    assertThat(permMissingElem.solution(array)).isEqualTo(1);
+    assertThat(permMissingElem.slowSolution(array)).isEqualTo(1);
+    assertThat(permMissingElem.quickSolution(array)).isEqualTo(1);
   }
 
   @Test
@@ -39,6 +42,7 @@ class PermMissingElemTest {
       array[i - 1] = i;
     }
 
-    assertThat(permMissingElem.solution(array)).isEqualTo(9999);
+    assertThat(permMissingElem.slowSolution(array)).isEqualTo(9999);
+    assertThat(permMissingElem.quickSolution(array)).isEqualTo(9999);
   }
 }
