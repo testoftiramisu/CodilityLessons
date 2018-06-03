@@ -1,11 +1,18 @@
 package io.testoftiramisu.lesson03.timecomplexity;
 
-import java.util.Arrays;
-
+/** Search for a missing element from the given array. */
 public class PermMissingElem {
 
-  /** Returns a missing element from the given array. */
-  public int slowSolution(int[] array) {
+  /**
+   * Returns a missing element from the given array.
+   *
+   * <p>for int[9998]{1..9998} element 9999 is missing.
+   *
+   * <p>for int[8]{1, 2, 3, 5, 6, 7, 8, 9} element 4 is missing.
+   *
+   * @param array with elements in range {1...array.length + 1};
+   */
+  public int solution(int[] array) {
     int length = array.length;
     double sum = (Math.pow(length, 2) + 3 * length + 2) / 2;
 
@@ -14,31 +21,5 @@ public class PermMissingElem {
     }
 
     return (int) sum;
-  }
-
-  /** Returns a missing element from the given array. */
-  public int quickSolution(int[] array) {
-    if (array.length == 0) {
-      return 1;
-    } else if (array.length == 1) {
-      return array[0] == 1 ? 2 : 1;
-    }
-
-    Arrays.sort(array);
-
-    int pivot = array.length / 2;
-
-    while (true) {
-      if (array[pivot] - 1 == pivot) {
-        pivot += pivot / 2;
-        if (pivot > array.length) {
-          pivot = array.length;
-        }
-      } else if (array[pivot] - 1 == pivot) {
-        pivot -= pivot / 2;
-      } else {
-        return pivot;
-      }
-    }
   }
 }

@@ -1,22 +1,23 @@
-package io.testoftiramisu.lesson03.timecomplexity;
+package io.testoftiramisu.lesson14.binarysearch;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-class PermMissingElemTest {
-  private PermMissingElem permMissingElem;
+class PermMissingElementBinaryTest {
+
+  private PermMissingElementBinary permMissingElem;
 
   @BeforeEach
   void setUp() {
-    permMissingElem = new PermMissingElem();
+    permMissingElem = new PermMissingElementBinary();
   }
 
   @Test
   void simple() {
-    int[] array = {2, 4, 1, 5};
-    assertThat(permMissingElem.solution(array)).isEqualTo(3);
+    int[] array = {2, 3, 1, 5};
+    assertThat(permMissingElem.solution(array)).isEqualTo(4);
   }
 
   @Test
@@ -27,8 +28,8 @@ class PermMissingElemTest {
 
   @Test
   void solution() {
-    int[] array = {1, 2, 3, 5, 4, 7, 8, 9};
-    assertThat(permMissingElem.solution(array)).isEqualTo(6);
+    int[] array = {1, 2, 3, 5, 6, 7, 8, 9};
+    assertThat(permMissingElem.solution(array)).isEqualTo(4);
   }
 
   @Test
@@ -39,8 +40,8 @@ class PermMissingElemTest {
 
   @Test
   void single() {
-    int[] array = {1};
-    assertThat(permMissingElem.solution(array)).isEqualTo(2);
+    int[] array = {2};
+    assertThat(permMissingElem.solution(array)).isEqualTo(1);
   }
 
   @Test
