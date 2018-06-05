@@ -1,6 +1,6 @@
 package io.testoftiramisu.lesson04.countingelements;
 
-// ToDo: refactor to meet complexity O(N + M), current is O(N * M);
+/** Slow length. Complexity is O(N * M). */
 public class MaxCounters {
 
   private int[] result;
