@@ -1,7 +1,7 @@
 package io.testoftiramisu.lesson100.training;
 
 /**
- * Represent the LinkedList based on array of ints.
+ * Represent the LinkedList implemented as array of integers.
  *
  * <p>The first node (the head) of a LinkedList is located on position [0].
  *
@@ -9,7 +9,9 @@ package io.testoftiramisu.lesson100.training;
  */
 public class LinkedList {
 
-  /** Returns length of LinkedList provided as array of ints. */
+  /**
+   * Returns length of the LinkedList provided as array of ints.
+   */
   public int length(int[] array) {
     if (array.length == 0) {
       return 0;
