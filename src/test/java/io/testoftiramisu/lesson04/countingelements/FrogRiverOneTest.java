@@ -15,11 +15,20 @@ class FrogRiverOneTest {
   }
 
   @Test
-  void solution() {
+  void positiveTest() {
     int[] array = {1, 3, 1, 4, 2, 3, 5, 4};
-
     assertThat(frogRiverOne.solution(5, array)).isEqualTo(6);
+  }
 
+  @Test
+  void negativeTest() {
+    int[] array = {1, 3, 1, 4, 2, 3, 2, 4};
+    assertThat(frogRiverOne.solution(5, array)).isEqualTo(-1);
+  }
 
+  @Test
+  void singleElement() {
+    int[] array = {1};
+    assertThat(frogRiverOne.solution(1, array)).isEqualTo(0);
   }
 }
